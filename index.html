@@ -39,9 +39,9 @@
         function updData(info) {
             
           $(".val").html(info.from);
-          $(".val_p").html(info.from_percent);
-          $(".prev_val").html(info.from_previous_from);
-          $(".prev_val_p").html(info.from_previous_percent);
+          $(".val_p").html(Math.round(info.from_percent));
+          $(".prev_val").html(info.from_previous);
+          $(".prev_val_p").html(Math.round(info.from_percent_previous));
         }
     </script>
     
