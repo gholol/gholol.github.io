@@ -17,8 +17,8 @@
   <body>
 
    <input type="text" id="demo"/>
-   <span>Current Value: <span class="val">0</span> (Percents: <span class="val_p"></span>)</span>
-   <span>Previous Value: <span class="prev_val">0</span> (Percents: <span class="prev_val_p"></span>)</span>
+   <span>Current Value: <span class="val">0</span> (Percents: <span class="val_p">0</span>%)</span>
+   <span>Previous Value: <span class="prev_val">0</span> (Percents: <span class="prev_val_p">0</span>%)</span>
     
     <script>
         var $Slider = $("#demo");
@@ -27,6 +27,7 @@
 
         jQuery(function ($) {
             $Slider.ionRangeSlider({
+                rom: 1,
                 min: 1,
                 max: 10,
                 previous_from: true,
