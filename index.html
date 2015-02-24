@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/ion.rangeSlider.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/ion.rangeSlider.skinModern.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.1.11/jquery.min.js"></script>
 
     <title>Gholol.GitHub.io</title>
   </head>
@@ -15,6 +16,23 @@
   <body>
 
    <input type="text" id="demo"/>
+    
+    <script>
+        var $Slider = $("#demo");
+
+
+        jQuery(function ($) {
+            $Slider.ionRangeSlider({
+                from: 5,
+                min: 1,
+                max: 10,
+                previous_from: true,
+                onChange: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    </script>
     
 <script src="/javascripts/ion.rangeSlider.js"></script>
   </body>
