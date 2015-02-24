@@ -17,13 +17,12 @@
   <body>
 
    <input type="text" id="demo"/>
-   <span>Current Value: <span class="val">0</span> (Percents: )</span>
-   <span>Previous Value: <span class="prev_val">0</span> (Percents: )</span>
+   <span>Current Value: <span class="val">0</span> (Percents: <span class="val_p"></span>)</span>
+   <span>Previous Value: <span class="prev_val">0</span> (Percents: <span class="prev_val_p"></span>)</span>
     
     <script>
         var $Slider = $("#demo");
-        var $val = $(".val");
-        var $prev_val = $(".prev_val");
+  
 
 
         jQuery(function ($) {
@@ -40,6 +39,9 @@
         function updData(info) {
             
           $(".val").html(info.from);
+          $(".val_p").html(info.from_percent);
+          $(".prev_val").html(info.from_previous_from);
+          $(".prev_val_p").html(info.from_previous_percent);
         }
     </script>
     
