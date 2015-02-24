@@ -17,7 +17,7 @@
 
    <input type="text" id="demo"/>
    <span>Current Value: <span class="val">0</span> (Percents: )</span>
-   <span>Previous Value: <span class="val">0</span> (Percents: )</span>
+   <span>Previous Value: <span class="prev_val">0</span> (Percents: )</span>
     
     <script>
         var $Slider = $("#demo");
@@ -34,6 +34,14 @@
                 }
             });
         });
+        
+        function updData(info) {
+          var $current = $('val');
+          var $previous = $('prev_val');
+          
+          $current.html(info.from);
+          $previous.html(info.from_previous);
+        }
     </script>
     
 <script src="/javascripts/main.js"></script>
